@@ -2,6 +2,12 @@
 
 cmake_minimum_required( VERSION 3.22 )
 
+# Set policy to suppress CMP0177 warnings
+if(POLICY CMP0177)
+    cmake_policy(SET CMP0177 NEW)
+endif()
+
+
 message( STATUS "Using CMake ${CMAKE_VERSION}" )
 
 # Require out-of-source builds
